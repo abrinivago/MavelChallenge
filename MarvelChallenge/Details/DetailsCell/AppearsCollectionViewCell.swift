@@ -20,6 +20,12 @@ class AppearsCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleAppear.isHidden = true
+        yearAppear.isHidden = true
+    }
+    
     func setupLabels(_ value: String) {
         titleAppear = UILabel()
         titleAppear.text = value

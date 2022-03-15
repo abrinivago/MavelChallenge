@@ -20,7 +20,13 @@ class ListViewController: UIViewController {
         self.setBinds()
         self.setupListCollection()
         self.checkOrigin()
-        view.backgroundColor = .white
+        self.setupNavBar()
+        self.view.backgroundColor = .white
+    }
+    
+    func setupNavBar() {
+        tabBarController?.navigationItem.title = "Marvel Challenge"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 20)]
     }
     
     func checkOrigin(_ pagination: String = "0") {
@@ -50,6 +56,8 @@ class ListViewController: UIViewController {
         
         ListCollectionView.delegate = self
         ListCollectionView.dataSource = self
+        
+        ListCollectionView.backgroundColor = UIColor(hexConvert: "#ECEFF1")
         
         let nibCharacter = UINib(nibName: "ListCollectionViewCell", bundle: nil)
         ListCollectionView.register(nibCharacter, forCellWithReuseIdentifier: "ListCollectionViewCell")
@@ -107,13 +115,16 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             if self.isCharacter {
                 titleName = listArray[indexPath.row].name ?? ""
+                cell?.listTitle.text? = titleName.uppercased()
             } else {
                 titleName = listArray[indexPath.row].title ?? ""
+                cell?.imageEventMode()
+                cell?.listTitle.text? = titleName
             }
-            
-            cell?.listTitle.text = titleName
+
             cell?.lisDescription.text = listArray[indexPath.row].resultDescription
             let pathImage = (listArray[indexPath.row].thumbnail?.path)! + "." + (listArray[indexPath.row].thumbnail?.thumbnailExtension)!
+            cell?.listImage.image?.withAlignmentRectInsets(UIEdgeInsets(top: -17, left: -17, bottom: -17, right: -17))
             cell?.listImage.pin_setImage(from: URL(string: pathImage)!)
             
             return cell ?? ListCollectionViewCell()
@@ -124,8 +135,8 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = DetailsViewController()
-        vc.isCharacter = true
-        vc.character = listArray[indexPath.row]
+        vc.isCharacter = isCharacter
+        vc.infoItem = listArray[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

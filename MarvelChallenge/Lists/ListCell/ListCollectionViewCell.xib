@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -24,42 +25,53 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZp-83-MvW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0md-Rv-n59">
-                                <rect key="frame" x="136" y="15" width="62" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="rTn-ag-qdR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RuA-jN-j2d">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTv-rW-cQZ">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RuA-jN-j2d" userLabel="ListImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="RQE-ca-VVI"/>
+                                            <constraint firstAttribute="height" constant="120" id="iRa-JH-bbf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="RQE-ca-VVI"/>
-                                    <constraint firstAttribute="height" constant="120" id="iRa-JH-bbf"/>
+                                    <constraint firstAttribute="height" constant="120" id="gSY-Rq-Zfv"/>
+                                    <constraint firstItem="RuA-jN-j2d" firstAttribute="centerX" secondItem="MTv-rW-cQZ" secondAttribute="centerX" id="iWa-3o-t8k"/>
+                                    <constraint firstItem="RuA-jN-j2d" firstAttribute="centerY" secondItem="MTv-rW-cQZ" secondAttribute="centerY" id="lFH-7T-lbP"/>
+                                    <constraint firstAttribute="width" constant="120" id="uzJ-TU-fsn"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dH-14-TcU">
-                                <rect key="frame" x="136" y="55" width="178" height="16.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="178" id="zcz-95-g2k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
-                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-dZ-zyg">
+                                <rect key="frame" x="136" y="15" width="154" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0md-Rv-n59">
+                                        <rect key="frame" x="0.0" y="0.0" width="154" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dH-14-TcU">
+                                        <rect key="frame" x="0.0" y="40.5" width="154" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.92549019607843142" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="RuA-jN-j2d" secondAttribute="bottom" id="6w3-Jx-H67"/>
-                            <constraint firstItem="RuA-jN-j2d" firstAttribute="leading" secondItem="dZp-83-MvW" secondAttribute="leading" id="9pj-Gg-Tzn"/>
-                            <constraint firstItem="3dH-14-TcU" firstAttribute="top" secondItem="0md-Rv-n59" secondAttribute="bottom" constant="8" id="M0k-rC-Tt4"/>
-                            <constraint firstItem="3dH-14-TcU" firstAttribute="leading" secondItem="0md-Rv-n59" secondAttribute="leading" id="UQK-Pg-yn1"/>
-                            <constraint firstItem="0md-Rv-n59" firstAttribute="top" secondItem="dZp-83-MvW" secondAttribute="top" constant="15" id="gUG-KF-KYE"/>
-                            <constraint firstItem="0md-Rv-n59" firstAttribute="leading" secondItem="RuA-jN-j2d" secondAttribute="trailing" constant="16" id="lxq-K6-Z9a"/>
-                            <constraint firstItem="RuA-jN-j2d" firstAttribute="top" secondItem="dZp-83-MvW" secondAttribute="top" id="x28-7h-X0I"/>
+                            <constraint firstAttribute="bottom" secondItem="MTv-rW-cQZ" secondAttribute="bottom" id="JfT-34-HW0"/>
+                            <constraint firstItem="zfv-dZ-zyg" firstAttribute="top" secondItem="dZp-83-MvW" secondAttribute="top" constant="15" id="eEO-yF-C4r"/>
+                            <constraint firstItem="MTv-rW-cQZ" firstAttribute="leading" secondItem="dZp-83-MvW" secondAttribute="leading" id="gr5-Ua-AvZ"/>
+                            <constraint firstAttribute="trailing" secondItem="zfv-dZ-zyg" secondAttribute="trailing" constant="30" id="lFE-lC-gNQ"/>
+                            <constraint firstItem="MTv-rW-cQZ" firstAttribute="top" secondItem="dZp-83-MvW" secondAttribute="top" id="mr8-SU-VPO"/>
+                            <constraint firstItem="zfv-dZ-zyg" firstAttribute="leading" secondItem="MTv-rW-cQZ" secondAttribute="trailing" constant="16" id="yYk-qc-8lB"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -73,11 +85,20 @@
             </constraints>
             <size key="customSize" width="320" height="158"/>
             <connections>
+                <outlet property="imageHeight" destination="iRa-JH-bbf" id="bbV-lt-cZU"/>
+                <outlet property="imageWidth" destination="RQE-ca-VVI" id="nf7-lM-ejy"/>
                 <outlet property="lisDescription" destination="3dH-14-TcU" id="C2l-MF-usI"/>
                 <outlet property="listImage" destination="RuA-jN-j2d" id="dvs-Wg-lle"/>
+                <outlet property="listStackView" destination="zfv-dZ-zyg" id="ecQ-dy-ScC"/>
                 <outlet property="listTitle" destination="0md-Rv-n59" id="OTc-Jh-4nx"/>
+                <outlet property="listView" destination="dZp-83-MvW" id="gbj-qE-1na"/>
             </connections>
             <point key="canvasLocation" x="70" y="114"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

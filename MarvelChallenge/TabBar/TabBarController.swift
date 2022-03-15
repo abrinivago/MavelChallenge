@@ -13,18 +13,38 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setControllers()
+        setupTabBar()
+//        setupNavBar()
     }
+    
+    private func setupTabBar() {
+//        tabBar.barStyle = .black
+        tabBar.isTranslucent = false
+        tabBar.backgroundColor = .white
+//        tabBar.tintColor = .black
+    }
+    
+//    func setupNavBar() {
+//        navigationItem.title = "Marvel Challenge"
+    
+//    }
     
     func setControllers() {
         let vc1 = ListViewController()
         vc1.isCharacter = true
-        vc1.tabBarItem.image = UIImage(systemName: "house.fill")
-        vc1.title = "Characters"
+        let icon1 = UIImage(named: "icon-superhero-disabled")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        let icon1Selected = UIImage(named: "icon-superhero")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        vc1.tabBarItem = UITabBarItem(title: "Characters",
+                                      image: icon1,
+                                      selectedImage: icon1Selected)
         
         let vc2 = ListViewController()
         vc2.isCharacter = false
-        vc2.tabBarItem.image = UIImage(systemName: "note.text")
-        vc2.title = "Events"
+        let icon2 = UIImage(named: "icon-calendar-disabled")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        let icon2Selected = UIImage(named: "icon-calendar")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        vc2.tabBarItem = UITabBarItem(title: "Events",
+                                      image: icon2,
+                                      selectedImage: icon2Selected)
         
         self.setViewControllers([vc1, vc2], animated: true)
     }

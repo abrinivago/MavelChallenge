@@ -14,6 +14,8 @@
 		EA35E0E027DA9ACB002E319D /* AppearsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E0DF27DA9ACB002E319D /* AppearsCollectionViewCell.swift */; };
 		EA35E0E227DAAB89002E319D /* EventsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E0E127DAAB89002E319D /* EventsAPI.swift */; };
 		EA35E0E527DAF54B002E319D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E0E427DAF54B002E319D /* TabBarController.swift */; };
+		EA35E0E927DD8993002E319D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E0E827DD8993002E319D /* ColorExtension.swift */; };
+		EA35E0EB27DDA49B002E319D /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA35E0EA27DDA49B002E319D /* RobotoCondensed-Bold.ttf */; };
 		EA48E98927D40BFE005A3C48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E98827D40BFE005A3C48 /* AppDelegate.swift */; };
 		EA48E98B27D40BFE005A3C48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E98A27D40BFE005A3C48 /* SceneDelegate.swift */; };
 		EA48E98D27D40BFE005A3C48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E98C27D40BFE005A3C48 /* ViewController.swift */; };
@@ -26,9 +28,6 @@
 		EA48E9AA27D539B6005A3C48 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9A827D539B6005A3C48 /* ListCollectionViewCell.swift */; };
 		EA48E9AB27D539B6005A3C48 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA48E9A927D539B6005A3C48 /* ListCollectionViewCell.xib */; };
 		EA48E9AE27D55DD7005A3C48 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA48E9AD27D55DD7005A3C48 /* RobotoCondensed-Regular.ttf */; };
-		EA48E9BB27D5685F005A3C48 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9BA27D5685F005A3C48 /* EventViewController.swift */; };
-		EA48E9BD27D5687C005A3C48 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9BC27D5687C005A3C48 /* EventViewModel.swift */; };
-		EA48E9BF27D5688E005A3C48 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9BE27D5688E005A3C48 /* EventModel.swift */; };
 		EA48E9C227D56B4A005A3C48 /* CharacterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9C127D56B4A005A3C48 /* CharacterAPI.swift */; };
 		EA48E9C627D56D7F005A3C48 /* MarvelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9C527D56D7F005A3C48 /* MarvelDTO.swift */; };
 		EA48E9CB27D6FC86005A3C48 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9CA27D6FC86005A3C48 /* DetailsViewController.swift */; };
@@ -44,6 +43,8 @@
 		EA35E0DF27DA9ACB002E319D /* AppearsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA35E0E127DAAB89002E319D /* EventsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPI.swift; sourceTree = "<group>"; };
 		EA35E0E427DAF54B002E319D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EA35E0E827DD8993002E319D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		EA35E0EA27DDA49B002E319D /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		EA48E98527D40BFE005A3C48 /* MarvelChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA48E98827D40BFE005A3C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA48E98A27D40BFE005A3C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +59,6 @@
 		EA48E9A827D539B6005A3C48 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA48E9A927D539B6005A3C48 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA48E9AD27D55DD7005A3C48 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		EA48E9BA27D5685F005A3C48 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
-		EA48E9BC27D5687C005A3C48 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
-		EA48E9BE27D5688E005A3C48 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		EA48E9C127D56B4A005A3C48 /* CharacterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterAPI.swift; sourceTree = "<group>"; };
 		EA48E9C527D56D7F005A3C48 /* MarvelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDTO.swift; sourceTree = "<group>"; };
 		EA48E9CA27D6FC86005A3C48 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +101,25 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		EA35E0E627DCF41A002E319D /* DetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA35E0D927D9EEB5002E319D /* ImageCollectionViewCell.swift */,
+				EA35E0DB27D9FB4F002E319D /* DescriptionCollectionViewCell.swift */,
+				EA35E0DD27D9FE05002E319D /* TitleCollectionViewCell.swift */,
+				EA35E0DF27DA9ACB002E319D /* AppearsCollectionViewCell.swift */,
+			);
+			path = DetailsCell;
+			sourceTree = "<group>";
+		};
+		EA35E0E727DD897B002E319D /* ColorExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EA35E0E827DD8993002E319D /* ColorExtension.swift */,
+			);
+			path = ColorExtension;
+			sourceTree = "<group>";
+		};
 		EA48E97C27D40BFD005A3C48 = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +141,9 @@
 		EA48E98727D40BFE005A3C48 /* MarvelChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				EA35E0E727DD897B002E319D /* ColorExtension */,
 				EA35E0E327DAF518002E319D /* TabBar */,
 				EA48E9C027D56B28005A3C48 /* Service */,
-				EA48E9AF27D567DC005A3C48 /* Events */,
 				EA48E9C727D6FC2A005A3C48 /* Details */,
 				EA48E99D27D5314E005A3C48 /* Lists */,
 				EA48E98827D40BFE005A3C48 /* AppDelegate.swift */,
@@ -188,43 +205,10 @@
 		EA48E9AC27D55D93005A3C48 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				EA35E0EA27DDA49B002E319D /* RobotoCondensed-Bold.ttf */,
 				EA48E9AD27D55DD7005A3C48 /* RobotoCondensed-Regular.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		EA48E9AF27D567DC005A3C48 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				EA48E9B227D567F6005A3C48 /* ViewController */,
-				EA48E9B127D567EE005A3C48 /* ViewModel */,
-				EA48E9B027D567E8005A3C48 /* Model */,
-			);
-			path = Events;
-			sourceTree = "<group>";
-		};
-		EA48E9B027D567E8005A3C48 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EA48E9BE27D5688E005A3C48 /* EventModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EA48E9B127D567EE005A3C48 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				EA48E9BC27D5687C005A3C48 /* EventViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		EA48E9B227D567F6005A3C48 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EA48E9BA27D5685F005A3C48 /* EventViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		EA48E9C027D56B28005A3C48 /* Service */ = {
@@ -256,11 +240,8 @@
 		EA48E9C727D6FC2A005A3C48 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				EA35E0E627DCF41A002E319D /* DetailsCell */,
 				EA48E9CA27D6FC86005A3C48 /* DetailsViewController.swift */,
-				EA35E0D927D9EEB5002E319D /* ImageCollectionViewCell.swift */,
-				EA35E0DB27D9FB4F002E319D /* DescriptionCollectionViewCell.swift */,
-				EA35E0DD27D9FE05002E319D /* TitleCollectionViewCell.swift */,
-				EA35E0DF27DA9ACB002E319D /* AppearsCollectionViewCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -325,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA35E0EB27DDA49B002E319D /* RobotoCondensed-Bold.ttf in Resources */,
 				EA48E9AB27D539B6005A3C48 /* ListCollectionViewCell.xib in Resources */,
 				EA48E99527D40BFF005A3C48 /* LaunchScreen.storyboard in Resources */,
 				EA48E99227D40BFF005A3C48 /* Assets.xcassets in Resources */,
@@ -388,16 +370,14 @@
 				EA48E9C227D56B4A005A3C48 /* CharacterAPI.swift in Sources */,
 				EA35E0DE27D9FE05002E319D /* TitleCollectionViewCell.swift in Sources */,
 				EA35E0E227DAAB89002E319D /* EventsAPI.swift in Sources */,
+				EA35E0E927DD8993002E319D /* ColorExtension.swift in Sources */,
 				EA48E9A627D532B4005A3C48 /* ListModel.swift in Sources */,
 				EA48E9C627D56D7F005A3C48 /* MarvelDTO.swift in Sources */,
-				EA48E9BD27D5687C005A3C48 /* EventViewModel.swift in Sources */,
 				EA35E0DA27D9EEB5002E319D /* ImageCollectionViewCell.swift in Sources */,
 				EA48E98D27D40BFE005A3C48 /* ViewController.swift in Sources */,
 				EA48E9CB27D6FC86005A3C48 /* DetailsViewController.swift in Sources */,
 				EA48E98927D40BFE005A3C48 /* AppDelegate.swift in Sources */,
 				EA35E0E527DAF54B002E319D /* TabBarController.swift in Sources */,
-				EA48E9BB27D5685F005A3C48 /* EventViewController.swift in Sources */,
-				EA48E9BF27D5688E005A3C48 /* EventModel.swift in Sources */,
 				EA48E9A327D5325E005A3C48 /* ListViewModel.swift in Sources */,
 				EA48E98B27D40BFE005A3C48 /* SceneDelegate.swift in Sources */,
 				EA48E9AA27D539B6005A3C48 /* ListCollectionViewCell.swift in Sources */,

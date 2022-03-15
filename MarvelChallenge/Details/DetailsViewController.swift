@@ -9,7 +9,7 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    var character: Results!
+    var infoItem: Results!
     var collectionScreen: UICollectionView!
     var collectionList: UICollectionView!
     var isCharacter: Bool!
@@ -31,6 +31,9 @@ class DetailsViewController: UIViewController {
         self.collectionScreen.register(DescriptionCollectionViewCell.self, forCellWithReuseIdentifier: "cellDescription")
         self.collectionScreen.register(TitleCollectionViewCell.self, forCellWithReuseIdentifier: "cellTitle")
         self.collectionScreen.register(AppearsCollectionViewCell.self, forCellWithReuseIdentifier: "cellAppears")
+       
+        let nibCharacter = UINib(nibName: "ListCollectionViewCell", bundle: nil)
+        collectionScreen.register(nibCharacter, forCellWithReuseIdentifier: "ListCollectionViewCell")
         
         self.collectionScreen.delegate = self
         self.collectionScreen.dataSource = self
@@ -47,16 +50,19 @@ class DetailsViewController: UIViewController {
     }
     
     func checkOrigin() {
+        setAppears = infoItem.comics?.items ?? []
         if isCharacter == true {
             setSections.append("Image")
-            if character.resultDescription != "" {
+            if infoItem.resultDescription != "" {
                 setSections.append("Description")
             }
-            setSections.append("CharacterTitle")
-            setAppears = character.comics?.items ?? []
+            setSections.append("Title")
         } else {
-            print("Events")
+                        setSections.append("CellEvents")
+                        setSections.append("Title")
+            print(setAppears)
         }
+        
     }
 }
 
@@ -73,17 +79,31 @@ extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataS
             switch setSections[indexPath.row] {
             case "Image":
                 let cell = collectionScreen.dequeueReusableCell(withReuseIdentifier: "cellImage", for: indexPath) as! ImageCollectionViewCell
-                cell.character = self.character
+                cell.character = self.infoItem
+                return cell
+                
+            case "CellEvents":
+                let cell = collectionScreen.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as! ListCollectionViewCell
+                
+                cell.listTitle.text = infoItem.title
+                cell.lisDescription.text = infoItem.resultDescription
+                let pathImage = (infoItem.thumbnail?.path)! + "." + (infoItem.thumbnail?.thumbnailExtension)!
+                cell.listImage.pin_setImage(from: URL(string: pathImage)!)
+                cell.imageEventMode()
                 return cell
                 
             case "Description":
                 let cell = collectionScreen.dequeueReusableCell(withReuseIdentifier: "cellDescription", for: indexPath) as! DescriptionCollectionViewCell
-                cell.character = self.character
+                cell.character = self.infoItem
                 return cell
                 
-            case "CharacterTitle":
+            case "Title":
                 let cell = collectionScreen.dequeueReusableCell(withReuseIdentifier: "cellTitle", for: indexPath) as! TitleCollectionViewCell
-                cell.titleValue = "COMICS EN LOS QUE APARECE"
+                if self.isCharacter {
+                    cell.titleValue = "APPEARS IN THESE COMICS"
+                } else {
+                    cell.titleValue = "COMICS TO DISCUSS"
+                }
                 return cell
             default:
                 return UICollectionViewCell()
@@ -102,10 +122,13 @@ extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataS
             case "Image":
                 return CGSize(width: view.frame.width, height: view.frame.width)
                 
+            case "CellEvents":
+                return CGSize(width: 344, height: 120 )
+                
             case "Description":
                 return CGSize(width: view.frame.width, height: 43 )
                 
-            case "CharacterTitle":
+            case "Title":
                 return CGSize(width: view.frame.width, height: 83 )
             default:
                 return CGSize(width: 0, height: 0)
