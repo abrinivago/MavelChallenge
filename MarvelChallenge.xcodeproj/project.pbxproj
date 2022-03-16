@@ -18,7 +18,6 @@
 		EA35E0EB27DDA49B002E319D /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA35E0EA27DDA49B002E319D /* RobotoCondensed-Bold.ttf */; };
 		EA48E98927D40BFE005A3C48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E98827D40BFE005A3C48 /* AppDelegate.swift */; };
 		EA48E98B27D40BFE005A3C48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E98A27D40BFE005A3C48 /* SceneDelegate.swift */; };
-		EA48E98D27D40BFE005A3C48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E98C27D40BFE005A3C48 /* ViewController.swift */; };
 		EA48E99027D40BFE005A3C48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA48E98E27D40BFE005A3C48 /* Main.storyboard */; };
 		EA48E99227D40BFF005A3C48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA48E99127D40BFF005A3C48 /* Assets.xcassets */; };
 		EA48E99527D40BFF005A3C48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA48E99327D40BFF005A3C48 /* LaunchScreen.storyboard */; };
@@ -31,7 +30,12 @@
 		EA48E9C227D56B4A005A3C48 /* CharacterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9C127D56B4A005A3C48 /* CharacterAPI.swift */; };
 		EA48E9C627D56D7F005A3C48 /* MarvelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9C527D56D7F005A3C48 /* MarvelDTO.swift */; };
 		EA48E9CB27D6FC86005A3C48 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9CA27D6FC86005A3C48 /* DetailsViewController.swift */; };
+		EA9D90BA27E2060D006E02A7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D90B827E2060D006E02A7 /* AuthViewController.swift */; };
+		EA9D90BB27E2060D006E02A7 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9D90B927E2060D006E02A7 /* AuthViewController.xib */; };
+		EA9D90BF27E22EF0006E02A7 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA9D90BE27E22EF0006E02A7 /* Roboto-Medium.ttf */; };
+		EA9D90C227E25888006E02A7 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D90C127E25888006E02A7 /* UserSession.swift */; };
 		EAF9D7C827E14E980013952A /* ListCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF9D7C727E14E980013952A /* ListCustomClass.swift */; };
+		EAF9D7CA27E186C00013952A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAF9D7C927E186C00013952A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +53,6 @@
 		EA48E98527D40BFE005A3C48 /* MarvelChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA48E98827D40BFE005A3C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA48E98A27D40BFE005A3C48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA48E98C27D40BFE005A3C48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA48E98F27D40BFE005A3C48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA48E99127D40BFF005A3C48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA48E99427D40BFF005A3C48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,7 +66,12 @@
 		EA48E9C127D56B4A005A3C48 /* CharacterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterAPI.swift; sourceTree = "<group>"; };
 		EA48E9C527D56D7F005A3C48 /* MarvelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDTO.swift; sourceTree = "<group>"; };
 		EA48E9CA27D6FC86005A3C48 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		EA9D90B827E2060D006E02A7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		EA9D90B927E2060D006E02A7 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		EA9D90BE27E22EF0006E02A7 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		EA9D90C127E25888006E02A7 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		EAF9D7C727E14E980013952A /* ListCustomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomClass.swift; sourceTree = "<group>"; };
+		EAF9D7C927E186C00013952A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,19 +151,16 @@
 		EA48E98727D40BFE005A3C48 /* MarvelChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				EA9D90C027E25852006E02A7 /* ViewFlow */,
 				EAF9D7C627E14E780013952A /* Utils */,
-				EA35E0E727DD897B002E319D /* ColorExtension */,
-				EA35E0E327DAF518002E319D /* TabBar */,
 				EA48E9C027D56B28005A3C48 /* Service */,
-				EA48E9C727D6FC2A005A3C48 /* Details */,
-				EA48E99D27D5314E005A3C48 /* Lists */,
 				EA48E98827D40BFE005A3C48 /* AppDelegate.swift */,
 				EA48E98A27D40BFE005A3C48 /* SceneDelegate.swift */,
-				EA48E98C27D40BFE005A3C48 /* ViewController.swift */,
 				EA48E98E27D40BFE005A3C48 /* Main.storyboard */,
 				EA48E99127D40BFF005A3C48 /* Assets.xcassets */,
 				EA48E99327D40BFF005A3C48 /* LaunchScreen.storyboard */,
 				EA48E99627D40BFF005A3C48 /* Info.plist */,
+				EAF9D7C927E186C00013952A /* GoogleService-Info.plist */,
 			);
 			path = MarvelChallenge;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				EA35E0EA27DDA49B002E319D /* RobotoCondensed-Bold.ttf */,
+				EA9D90BE27E22EF0006E02A7 /* Roboto-Medium.ttf */,
 				EA48E9AD27D55DD7005A3C48 /* RobotoCondensed-Regular.ttf */,
 			);
 			path = Fonts;
@@ -248,9 +254,31 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		EA9D90B727E205B7006E02A7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				EA9D90B827E2060D006E02A7 /* AuthViewController.swift */,
+				EA9D90B927E2060D006E02A7 /* AuthViewController.xib */,
+				EA9D90C127E25888006E02A7 /* UserSession.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		EA9D90C027E25852006E02A7 /* ViewFlow */ = {
+			isa = PBXGroup;
+			children = (
+				EA9D90B727E205B7006E02A7 /* Authentication */,
+				EA35E0E327DAF518002E319D /* TabBar */,
+				EA48E9C727D6FC2A005A3C48 /* Details */,
+				EA48E99D27D5314E005A3C48 /* Lists */,
+			);
+			path = ViewFlow;
+			sourceTree = "<group>";
+		};
 		EAF9D7C627E14E780013952A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EA35E0E727DD897B002E319D /* ColorExtension */,
 				EA48E9AC27D55D93005A3C48 /* Fonts */,
 				EAF9D7C727E14E980013952A /* ListCustomClass.swift */,
 			);
@@ -317,12 +345,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9D90BB27E2060D006E02A7 /* AuthViewController.xib in Resources */,
 				EA35E0EB27DDA49B002E319D /* RobotoCondensed-Bold.ttf in Resources */,
 				EA48E9AB27D539B6005A3C48 /* ListCollectionViewCell.xib in Resources */,
 				EA48E99527D40BFF005A3C48 /* LaunchScreen.storyboard in Resources */,
 				EA48E99227D40BFF005A3C48 /* Assets.xcassets in Resources */,
 				EA48E9AE27D55DD7005A3C48 /* RobotoCondensed-Regular.ttf in Resources */,
 				EA48E99027D40BFE005A3C48 /* Main.storyboard in Resources */,
+				EAF9D7CA27E186C00013952A /* GoogleService-Info.plist in Resources */,
+				EA9D90BF27E22EF0006E02A7 /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,13 +416,14 @@
 				EA35E0E927DD8993002E319D /* ColorExtension.swift in Sources */,
 				EA48E9A627D532B4005A3C48 /* ListModel.swift in Sources */,
 				EA48E9C627D56D7F005A3C48 /* MarvelDTO.swift in Sources */,
+				EA9D90C227E25888006E02A7 /* UserSession.swift in Sources */,
 				EA35E0DA27D9EEB5002E319D /* ImageCollectionViewCell.swift in Sources */,
-				EA48E98D27D40BFE005A3C48 /* ViewController.swift in Sources */,
 				EA48E9CB27D6FC86005A3C48 /* DetailsViewController.swift in Sources */,
 				EA48E98927D40BFE005A3C48 /* AppDelegate.swift in Sources */,
 				EA35E0E527DAF54B002E319D /* TabBarController.swift in Sources */,
 				EA48E9A327D5325E005A3C48 /* ListViewModel.swift in Sources */,
 				EA48E98B27D40BFE005A3C48 /* SceneDelegate.swift in Sources */,
+				EA9D90BA27E2060D006E02A7 /* AuthViewController.swift in Sources */,
 				EA48E9AA27D539B6005A3C48 /* ListCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

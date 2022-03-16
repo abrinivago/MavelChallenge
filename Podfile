@@ -7,6 +7,8 @@ target 'MarvelChallenge' do
 
   pod 'Alamofire'
   pod 'PINRemoteImage'
+  pod 'Firebase/Auth'
+
   # Pods for MarvelChallenge
 
 end

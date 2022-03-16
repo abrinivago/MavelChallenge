@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         window.backgroundColor = UIColor(hexConvert: "#ECEFF1")
-        let vc = TabBarViewController()
+        let vc = AuthViewController()
         let navController = UINavigationController(rootViewController: vc)
         window.rootViewController = navController
         window.makeKeyAndVisible()
