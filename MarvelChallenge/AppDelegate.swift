@@ -35,13 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupNavBarAppearance() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        appearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 20)!]
-        appearance.backgroundColor = UIColor.red
+        appearance.backgroundColor = UIColor.black
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
-
-
 }
 

@@ -8,8 +8,9 @@
 import UIKit
 import PINRemoteImage
 
-class ListViewController: UIViewController {
+class ListViewController: ListCustomClass {
     
+    var modalDetails: DetailsViewController?
     var listViewModel = ListViewModel()
     var isCharacter: Bool!
     var listArray = [Results]()
@@ -20,13 +21,25 @@ class ListViewController: UIViewController {
         self.setBinds()
         self.setupListCollection()
         self.checkOrigin()
-        self.setupNavBar()
         self.view.backgroundColor = .white
     }
     
-    func setupNavBar() {
-        tabBarController?.navigationItem.title = "Marvel Challenge"
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 20)]
+    @objc func dismisModal(){
+        self.ListCollectionView.backgroundColor = UIColor(hexConvert: "#ECEFF1")
+        for recognizer in self.navigationController?.navigationBar.gestureRecognizers ?? [] {
+            self.navigationController?.navigationBar.removeGestureRecognizer(recognizer)
+        }
+        UIView.transition(with: self.view, duration: 0.3, options: [.transitionCrossDissolve], animations: {
+            self.modalDetails?.view.removeFromSuperview()
+        }, completion: {_ in
+            self.modalDetails?.willMove(toParent: nil)
+            self.modalDetails?.removeFromParent()
+            self.tabBarController?.tabBar.isHidden.toggle()
+        })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.setupNavBar(title: "Marvel Challenge")
     }
     
     func checkOrigin(_ pagination: String = "0") {
@@ -134,9 +147,25 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = DetailsViewController()
-        vc.isCharacter = isCharacter
-        vc.infoItem = listArray[indexPath.row]
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.modalDetails(selectData: listArray[indexPath.row])
     }
+    
+    func modalDetails(selectData: Results){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismisModal))
+        self.navigationController?.navigationBar.addGestureRecognizer(tap)
+        ListCollectionView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        modalDetails = DetailsViewController()
+        modalDetails?.isCharacter = isCharacter
+        modalDetails?.infoItem = selectData
+        modalDetails?.view.frame = CGRect(x: 8, y: 100, width: view.frame.width - 16, height: view.frame.height)
+        addChild(modalDetails ?? DetailsViewController())
+        UIView.transition(with: self.view, duration: 0.3, options: [.transitionCrossDissolve], animations: {
+            self.view.addSubview(self.modalDetails?.view ?? UIView())
+        }, completion: nil)
+        
+        modalDetails?.didMove(toParent: self)
+        tabBarController?.tabBar.isHidden.toggle()
+    }
+    
+
 }

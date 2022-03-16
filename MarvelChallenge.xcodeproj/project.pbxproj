@@ -31,6 +31,7 @@
 		EA48E9C227D56B4A005A3C48 /* CharacterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9C127D56B4A005A3C48 /* CharacterAPI.swift */; };
 		EA48E9C627D56D7F005A3C48 /* MarvelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9C527D56D7F005A3C48 /* MarvelDTO.swift */; };
 		EA48E9CB27D6FC86005A3C48 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48E9CA27D6FC86005A3C48 /* DetailsViewController.swift */; };
+		EAF9D7C827E14E980013952A /* ListCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF9D7C727E14E980013952A /* ListCustomClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		EA48E9C127D56B4A005A3C48 /* CharacterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterAPI.swift; sourceTree = "<group>"; };
 		EA48E9C527D56D7F005A3C48 /* MarvelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDTO.swift; sourceTree = "<group>"; };
 		EA48E9CA27D6FC86005A3C48 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		EAF9D7C727E14E980013952A /* ListCustomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		EA48E98727D40BFE005A3C48 /* MarvelChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				EAF9D7C627E14E780013952A /* Utils */,
 				EA35E0E727DD897B002E319D /* ColorExtension */,
 				EA35E0E327DAF518002E319D /* TabBar */,
 				EA48E9C027D56B28005A3C48 /* Service */,
@@ -150,7 +153,6 @@
 				EA48E98A27D40BFE005A3C48 /* SceneDelegate.swift */,
 				EA48E98C27D40BFE005A3C48 /* ViewController.swift */,
 				EA48E98E27D40BFE005A3C48 /* Main.storyboard */,
-				EA48E9AC27D55D93005A3C48 /* Fonts */,
 				EA48E99127D40BFF005A3C48 /* Assets.xcassets */,
 				EA48E99327D40BFF005A3C48 /* LaunchScreen.storyboard */,
 				EA48E99627D40BFF005A3C48 /* Info.plist */,
@@ -244,6 +246,15 @@
 				EA48E9CA27D6FC86005A3C48 /* DetailsViewController.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		EAF9D7C627E14E780013952A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA48E9AC27D55D93005A3C48 /* Fonts */,
+				EAF9D7C727E14E980013952A /* ListCustomClass.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +378,7 @@
 				EA48E99F27D531A9005A3C48 /* ListViewController.swift in Sources */,
 				EA35E0E027DA9ACB002E319D /* AppearsCollectionViewCell.swift in Sources */,
 				EA35E0DC27D9FB4F002E319D /* DescriptionCollectionViewCell.swift in Sources */,
+				EAF9D7C827E14E980013952A /* ListCustomClass.swift in Sources */,
 				EA48E9C227D56B4A005A3C48 /* CharacterAPI.swift in Sources */,
 				EA35E0DE27D9FE05002E319D /* TitleCollectionViewCell.swift in Sources */,
 				EA35E0E227DAAB89002E319D /* EventsAPI.swift in Sources */,

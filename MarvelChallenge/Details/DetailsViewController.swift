@@ -31,7 +31,7 @@ class DetailsViewController: UIViewController {
         self.collectionScreen.register(DescriptionCollectionViewCell.self, forCellWithReuseIdentifier: "cellDescription")
         self.collectionScreen.register(TitleCollectionViewCell.self, forCellWithReuseIdentifier: "cellTitle")
         self.collectionScreen.register(AppearsCollectionViewCell.self, forCellWithReuseIdentifier: "cellAppears")
-       
+        
         let nibCharacter = UINib(nibName: "ListCollectionViewCell", bundle: nil)
         collectionScreen.register(nibCharacter, forCellWithReuseIdentifier: "ListCollectionViewCell")
         
@@ -44,7 +44,7 @@ class DetailsViewController: UIViewController {
     func setupConstraints() {
         collectionScreen.translatesAutoresizingMaskIntoConstraints = false
         collectionScreen.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
-        collectionScreen.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor).isActive = true
+        collectionScreen.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         collectionScreen.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         collectionScreen.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
@@ -58,9 +58,8 @@ class DetailsViewController: UIViewController {
             }
             setSections.append("Title")
         } else {
-                        setSections.append("CellEvents")
-                        setSections.append("Title")
-            print(setAppears)
+            setSections.append("CellEvents")
+            setSections.append("Title")
         }
         
     }
