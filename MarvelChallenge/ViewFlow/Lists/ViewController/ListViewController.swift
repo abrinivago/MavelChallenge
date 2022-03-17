@@ -15,6 +15,7 @@ class ListViewController: ListCustomClass {
     var isCharacter: Bool!
     var listArray = [Results]()
     var ListCollectionView: UICollectionView!
+    let spinner = SpinnerViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class ListViewController: ListCustomClass {
     }
     
     func checkOrigin(_ pagination: String = "0") {
-        if isCharacter == true {
+        if isCharacter {
             self.listViewModel.getCharacter(pagination)
         } else {
             self.listViewModel.getEvents(pagination)
@@ -70,7 +71,7 @@ class ListViewController: ListCustomClass {
     
     func setBinds() {
         self.listViewModel.bindStartRequest = {() -> Void in
-            print("Inicia la consulta")
+            print("Start Request")
         }
         self.listViewModel.bindRequestData = {(_ arrayList: [Results]?) -> Void in
             self.listArray.append(contentsOf: arrayList ?? [])
@@ -80,7 +81,7 @@ class ListViewController: ListCustomClass {
             print(errorMessage)
         }
         self.listViewModel.bindEndRequest = {() -> Void in
-            print("Termina la consulta")
+            print("End Request")
         }
     }
 }
@@ -94,7 +95,7 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let currentCount = self.listArray.count
-        if indexPath.row == (currentCount - 3) {
+        if indexPath.row == (currentCount - 3) && ((listViewModel.totalCount ?? 0) - 3 ) > currentCount - 3 {
             self.checkOrigin(String(currentCount))
         }
         
@@ -130,14 +131,12 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
             transition = .transitionFlipFromLeft
         }
         
-        
         modalDetails?.view.frame = contentFrame
         addChild(modalDetails ?? DetailsViewController())
         tabBarController?.tabBar.isHidden.toggle()
         UIView.transition(with: self.view, duration: 0.3, options: [transition], animations: {
             self.view.addSubview(self.modalDetails?.view ?? UIView())
         }, completion: nil)
-        
         modalDetails?.didMove(toParent: self)
     }
     

@@ -34,7 +34,7 @@ class ListCustomClass: UIViewController {
         let closeSessionBtn = UIButton(type: .system)
         closeSessionBtn.setImage(UIImage(systemName: "rectangle.portrait.and.arrow.right"), for: .normal)
         closeSessionBtn.tintColor = .white
-        closeSessionBtn.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        closeSessionBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: closeSessionBtn)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(closeSessionButton))

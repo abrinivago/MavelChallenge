@@ -20,8 +20,6 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sessionVerify()
-        self.emailTextfield.text = "semevuelaelsombrero@msn.net"
-        self.passwordTextfield.text = "Carpinchocolorado1"
     }
     
     func sessionVerify(){
@@ -40,7 +38,7 @@ class AuthViewController: UIViewController {
                     let vc = TabBarViewController()
                     self.navigationController?.pushViewController(vc, animated: true)
                 } else {
-                    let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando el usuario", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Error", message: "Register fail", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     self.present(alertController, animated: true, completion: nil)
                 }
@@ -57,8 +55,8 @@ class AuthViewController: UIViewController {
                     let vc = TabBarViewController()
                     self.navigationController?.pushViewController(vc, animated: true)
                 } else {
-                    let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando el usuario", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    let alertController = UIAlertController(title: "Error", message: "Auth error", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .default))
                     self.present(alertController, animated: true, completion: nil)
                 }
             }

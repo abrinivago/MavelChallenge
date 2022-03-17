@@ -10,11 +10,12 @@ import Foundation
 class ListViewModel {
     let eventAPI = EventsAPI()
     let characterAPI = CharacterAPI()
-    var listData: [Results] = []{
+    var listData: DataClass? {
         didSet {
-            self.bindRequestData(listData)
+            self.bindRequestData(listData?.results)
         }
     }
+    var totalCount: Int?
     
     var bindStartRequest = {() -> Void in }
     var bindEndRequest = {() -> Void in }
@@ -24,8 +25,9 @@ class ListViewModel {
     func getCharacter(_ offset: String = "0") {
         bindStartRequest()
         characterAPI.getCharacters(offset: offset){ responseData in
+            self.listData = responseData.data
+            self.totalCount = responseData.data?.total
             self.bindEndRequest()
-            self.listData = responseData.data?.results ?? []
         } onError: { errorData in
             self.bindEndRequest()
             self.bindErrorMessage(errorData.debugDescription)
@@ -35,8 +37,9 @@ class ListViewModel {
     func getEvents(_ offset: String = "0") {
         bindStartRequest()
         eventAPI.getEvents(offset: offset){ responseData in
+            self.listData = responseData.data
+            self.totalCount = responseData.data?.total
             self.bindEndRequest()
-            self.listData = responseData.data?.results ?? []
         } onError: { errorData in
             self.bindEndRequest()
             self.bindErrorMessage(errorData.debugDescription)
