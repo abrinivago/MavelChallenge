@@ -22,7 +22,7 @@ class DescriptionCollectionViewCell: UICollectionViewCell {
     func setupDescription() {
             characterDetail = UILabel()
             characterDetail.text = character.resultDescription
-            characterDetail.numberOfLines = 0
+            characterDetail.numberOfLines = 5
             characterDetail.font = UIFont(name: "RobotoCondensed-Regular", size: 14)
             self.addSubview(characterDetail!)
             setupCharacterDetailConstraints()

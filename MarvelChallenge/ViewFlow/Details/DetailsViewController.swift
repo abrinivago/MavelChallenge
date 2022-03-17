@@ -122,7 +122,7 @@ extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataS
                 return CGSize(width: view.frame.width, height: 120 )
 
             case "Description":
-                return CGSize(width: view.frame.width, height: 50)
+                return CGSize(width: view.frame.width, height: 80)
 
             case "Title":
                 return CGSize(width: view.frame.width, height: 41 )
